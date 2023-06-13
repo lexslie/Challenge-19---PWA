@@ -18,7 +18,11 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // webpack plugin to generate html
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "J.A.T.E."
+      }),
     ],
 
     module: {
